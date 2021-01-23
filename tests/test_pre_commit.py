@@ -9,8 +9,8 @@ from pre_commit.main import main as pre_commit
 from jupytext import write
 from jupytext.cli import jupytext
 
-if sys.platform.startswith("win"):
-    # The tests below fail in the Windows plan
+if sys.platform.startswith("win"):  # pragma: nocover
+    # The tests below fail in the Windows plan (which does not upload coverage)
     # https://github.com/mwouts/jupytext/runs/1745075455
     pytestmark = pytest.mark.skip(
         "OSError: [WinError 193] %1 is not a valid Win32 application"
