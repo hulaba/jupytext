@@ -1,6 +1,7 @@
 """`jupytext` as a command line tool"""
 
 import os
+import io
 import re
 import sys
 import glob
@@ -722,7 +723,7 @@ def jupytext_single_file(nb_file, args, log):
                     )
                 )
             create_prefix_dir(path, fmt)
-            with open(path, "w") as fp:
+            with io.open(path, "w", encoding="utf-8") as fp:
                 fp.write(new_content)
 
         # Otherwise, we only update the timestamp of the text file to make sure
