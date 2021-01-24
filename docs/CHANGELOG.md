@@ -10,6 +10,7 @@ Jupytext ChangeLog
 
 **Fixed**
 - Indented magic commands are supported ([#694](https://github.com/mwouts/jupytext/issues/694))
+- Code cells that contain triple backticks (or more) are now encapsulated with four backticks (or more) in the Markdown format. The version number for that format was increased to 1.3 ([#712](https://github.com/mwouts/jupytext/issues/712))
 
 **Added**
 - We made sure that `py:percent` scripts end with exactly one blank line ([#682](https://github.com/mwouts/jupytext/issues/682))
